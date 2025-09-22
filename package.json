@@ -1,0 +1,70 @@
+{
+  "name": "focusdev",
+  "displayName": "FocusDev",
+  "publisher": "arkabanerjee",
+  "description": "FocusDev — a cute Pomodoro-style timer for VS Code (Webview + settings + session count).",
+  "version": "0.0.1",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thearkabanerjee/focus-dev"
+  },
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "main": "./extension.js",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:focusDev.open",
+    "onCommand:focusDev.openSettings"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "focusDev.open",
+        "title": "FocusDev: Open Timer"
+      },
+      {
+        "command": "focusDev.openSettings",
+        "title": "FocusDev: Open Settings"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "FocusDev",
+      "properties": {
+        "focusDev.workMinutes": {
+          "type": "number",
+          "default": 25,
+          "description": "Work session length in minutes."
+        },
+        "focusDev.breakMinutes": {
+          "type": "number",
+          "default": 5,
+          "description": "Short break length in minutes."
+        },
+        "focusDev.longBreakMinutes": {
+          "type": "number",
+          "default": 15,
+          "description": "Long break length in minutes."
+        },
+        "focusDev.longBreakInterval": {
+          "type": "number",
+          "default": 4,
+          "description": "How many work sessions before a long break."
+        },
+        "focusDev.autoStartNext": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically start the next session when one ends."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./vscode-prepublish.js || true",
+    "test": "echo \"No tests\" && exit 0"
+  }
+}
