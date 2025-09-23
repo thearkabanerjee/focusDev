@@ -4,7 +4,7 @@
   "publisher": "arkabanerjee",
   "description": "FocusDev — a cute Pomodoro-style timer for VS Code (Webview + settings + session count).",
   "version": "0.0.1",
-  "icon": "icon.png",
+  "icon": "assests/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/thearkabanerjee/focus-dev"
@@ -12,6 +12,16 @@
   "engines": {
     "vscode": "^1.50.0"
   },
+  "keywords": [
+    "pomodoro", "timer", "productivity", "focus", "work", "break", "long break",
+    "pomodoro technique", "pomodoro timer", "pomodoro productivity", "pomodoro productivity timer",
+    "pomodoro productivity extension", "pomodoro productivity app",
+    "pomodoro productivity tool", "pomodoro productivity software", "pomodoro productivity application", "pomodoro productivity extension for vscode", "pomodoro productivity for vscode", "pomodoro productivity vscode extension",
+    "pomodoro productivity vscode app", "pomodoro productivity vscode tool", "pomodoro productivity vscode software", "pomodoro productivity vscode application", "vscode pomodoro timer", "vscode pomodoro extension", "vscode pomodoro app",
+    "vscode pomodoro tool", "vscode pomodoro software", "vscode pomodoro application", "vscode pomodoro extension for vscode", "vscode pomodoro for vscode", "vscode pomodoro vscode extension", "vscode pomodoro vscode app",
+    "vscode pomodoro vscode tool", "vscode pomodoro vscode software", "vscode pomodoro vscode application", "pomodoro productivity vscode extension", "pomodoro productivity vscode app", "pomodoro productivity vscode tool",
+    "pomodoro productivity vscode application"
+  ],
   "main": "./extension.js",
   "categories": [
     "Other"

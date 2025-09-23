@@ -146,6 +146,9 @@ function getWebviewContent(webview, context) {
   </style>
 </head>
 <body>
+   <div style="display:flex; justify-content:center; margin-bottom:12px;">
+    <button class="btn primary" id="top-start" style="font-size:16px; padding:8px 16px;">Start FocusDev</button>
+  </div>
   <div class="wrap">
     <div class="card">
       <div class="left">
@@ -211,6 +214,14 @@ function getWebviewContent(webview, context) {
   <script>
     const vscode = acquireVsCodeApi();
     const initialState = ${JSON.stringify(initialState)};
+  	// const topStartBtn = document.getElementById('top-start');
+
+
+
+	// // When clicked, start the timer
+	// topStartBtn.addEventListener('click', () => {
+	// 	startTimer();
+	// });
 
     // UI refs
     const timeEl = document.getElementById('time');
