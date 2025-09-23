@@ -21,3 +21,5 @@ Open Settings and search for `FocusDev` to change:
 
 - No external assets required: UI uses inline SVG animation.
 - The extension persists a global total session count in VS Code's `globalState`.
+
+
