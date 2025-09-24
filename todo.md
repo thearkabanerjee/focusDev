@@ -1,3 +1,5 @@
+date : 23 Sep 2025
+
 so i have a few things in mind. 
 
 
@@ -10,12 +12,13 @@ I want to make it look like a gif running :
 
 
 
+date : 24 Sep 2025
 updates:
 1. the GIF is running
 2. everything is working well
 3. but i still need to do a few things. 
     -- the work, break and session details are not updating with the change in settings
-    -- i want to make a small settings button on some part and that will just take them to the settings of the extension instead of some `Cmd +Shift +P` thing / `Ctrl + Shift + P` thing
+    -- i want to make a small settings button on some part and that will just take them to the settings of the extension instead of some `Cmd +Shift +P` / `Ctrl + Shift + P` thing
 
 
     -- I still want to have a button that will run the extension like code runner does and unlike that `Cmd + Shift + P` / `Ctrl + Shift + P` thing
