@@ -3,11 +3,11 @@
   "displayName": "FocusDev",
   "publisher": "arkabanerjee",
   "description": "FocusDev — a cute Pomodoro-style timer for VS Code (Webview + settings + session count).",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "icon": "assests/logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thearkabanerjee/focus-dev"
+    "url": "https://github.com/thearkabanerjee/focusdev"
   },
   "engines": {
     "vscode": "^1.50.0"
