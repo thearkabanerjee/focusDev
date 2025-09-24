@@ -186,14 +186,36 @@ function updateUI(){ timerEl.textContent=formatTime(state.remaining); timerLabel
 let timerId=null;
 function tick(){ state.remaining=Math.max(0,state.remaining-1); updateUI(); if(state.remaining===0) handleSessionComplete(); }
 
-function startTimer(){ if(state.running) return; state.running=true; timerId=setInterval(tick,1000); saveState(); }
-function pauseTimer(){ if(!state.running) return; state.running=false; clearInterval(timerId); timerId=null; saveState(); }
+function startTimer() {
+  if (state.running) return;
+  state.running = true;
+  timerId = setInterval(tick, 1000);
+  saveState();
+  startBtn.textContent = 'Pause';
+}
+
+function pauseTimer() {
+  if (!state.running) return;
+  state.running = false;
+  clearInterval(timerId);
+  timerId = null;
+  saveState();
+  startBtn.textContent = 'Start';
+}
 function resetTimer(){ pauseTimer(); state.remaining=state.mode==='work'?workSeconds:(state.mode==='break'?breakSeconds:longBreakSeconds); updateUI(); saveState(); }
 function switchToMode(newMode){ state.mode=newMode; state.remaining=newMode==='work'?workSeconds:(newMode==='break'?breakSeconds:longBreakSeconds); updateUI(); }
 function handleSessionComplete(){ vscode.postMessage({type:'sessionComplete', mode:state.mode}); if(state.mode==='work'){ state.completedWorkSessions=(state.completedWorkSessions||0)+1; if(state.completedWorkSessions%longInterval===0) switchToMode('longbreak'); else switchToMode('break'); } else switchToMode('work'); if(autoStartNext) startTimer(); else pauseTimer(); saveState(); }
 function saveState(){ localStorage.setItem('focusDev.state',JSON.stringify(state)); }
 
-startBtn.addEventListener('click', ()=>{ state.running ? pauseTimer() : startTimer(); });
+startBtn.addEventListener('click', () => {
+  if (state.running) {
+    pauseTimer();
+    startBtn.textContent = 'Start';
+  } else {
+    startTimer();
+    startBtn.textContent = 'Pause';
+  }
+});
 resetBtn.addEventListener('click', ()=>{ resetTimer(); });
 
 updateUI();
